@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Login } from "../public/features/login/pages/login";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +10,10 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  useEffect(() => {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("dark");
+  }, []);
+
+  return <Login />;
 }
