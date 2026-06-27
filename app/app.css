@@ -9,33 +9,53 @@
   COLORS
 */
 @theme {
-  --color-brand-primary: var(--brand-primary);
-  --color-brand-secondary: var(--brand-secondary);
+  --color-title: var(--title);
+  --color-title-alt: var(--title-alt);
+  --color-title-secondary: var(--title-secondary);
+  --color-title-secondary-alt: var(--title-secondary-alt);
+  --color-title-tertiary: var(--title-tertiary);
+  --color-title-tertiary-alt: var(--title-tertiary-alt);
   --color-highlight: var(--highlight);
   --color-paragraph: var(--paragraph);
+  --color-paragraph-alt: var(--paragraph-alt);
   --color-paragraph-inverted: var(--paragraph-inverted);
   --color-app-background: var(--app-background);
+  --color-app-background-alt: var(--app-background-alt);
   --color-app-text: var(--app-text);
 }
 
 :root,
 html.light {
-  --brand-primary: #344CB7;
-  --brand-secondary: #F26F14;
-  --highlight: #52b2cf;
+  --title: #344CB7;
+  --title-alt: #EEF3FF;
+  --title-secondary: #F26F14;
+  --title-secondary-alt: #F26F14;
+  --title-tertiary: #030712;
+  --title-tertiary-alt: #030712;
+  --highlight: #70BCD2;
   --paragraph: #444653;
+  --paragraph-alt: #D2D8EF;
   --paragraph-inverted: #D2D8EF;
+
   --app-background: #FFFFFF;
+  --app-background-alt: #344CB7;
   --app-text: #030712;
 }
 
 html.dark {
-  --brand-primary: #EFF3FA;
-  --brand-secondary: #FAA80F;
+  --title: #EEF3FF;
+  --title-alt: #FAA80F;
+  --title-secondary: #6EE7B7;
+  --title-secondary-alt: #FAA80F;
+  --title-tertiary: #FFFFFF;
+  --title-tertiary-alt: #FFFFFF;
   --highlight: #00C8E8;
-  --paragraph: #f9fafb;
+  --paragraph: #97ABC4;
+  --paragraph-alt: #D2D8EF;
   --paragraph-inverted: #444653;
-  --app-background: #030712;
+
+  --app-background: #040c16;
+  --app-background-alt: #061d3d;
   --app-text: #FFFFFF;
   color-scheme: dark;
 }

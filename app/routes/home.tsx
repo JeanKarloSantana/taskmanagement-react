@@ -12,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   useEffect(() => {
     document.documentElement.classList.remove("dark");
-    document.documentElement.classList.add("dark");
+    document.documentElement.classList.add("light");
   }, []);
 
   return <Login />;
