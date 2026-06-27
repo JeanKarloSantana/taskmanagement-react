@@ -16,11 +16,10 @@ export function Card() {
             <p>-----------------------------</p>
             <div className="bg-app-background-alt">
                 <h1 className="text-title-alt">title-alt</h1>
-                <h1 className="text-title-secondary-alt">title-secondary</h1>
-                <h1 className="text-title-tertiary-alt">title-tertiary</h1>
-                <h1 className="text-highlight">highlight</h1>
-                <h1 className="text-paragraph">paragraph</h1>
-                <h1 className="text-paragraph-alt">paragraph</h1>
+                <h1 className="text-title-secondary-alt">title-secondary-alt</h1>
+                <h1 className="text-title-tertiary-alt">title-tertiary-alt</h1>
+                <h1 className="text-highlight-alt">highlight-alt</h1>
+                <h1 className="text-paragraph-alt">paragraph-alt</h1>
             </div>
         </div>
     )

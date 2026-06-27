@@ -16,12 +16,12 @@
   --color-title-tertiary: var(--title-tertiary);
   --color-title-tertiary-alt: var(--title-tertiary-alt);
   --color-highlight: var(--highlight);
+  --color-highlight-alt: var(--highlight-alt);
   --color-paragraph: var(--paragraph);
   --color-paragraph-alt: var(--paragraph-alt);
   --color-paragraph-inverted: var(--paragraph-inverted);
   --color-app-background: var(--app-background);
   --color-app-background-alt: var(--app-background-alt);
-  --color-app-text: var(--app-text);
 }
 
 :root,
@@ -32,35 +32,31 @@ html.light {
   --title-secondary-alt: #F26F14;
   --title-tertiary: #030712;
   --title-tertiary-alt: #030712;
-  --highlight: #70BCD2;
+  --highlight: #16329f;
+  --highlight-alt: #4DD0FF;
   --paragraph: #444653;
   --paragraph-alt: #D2D8EF;
-  --paragraph-inverted: #D2D8EF;
-
   --app-background: #FFFFFF;
   --app-background-alt: #344CB7;
-  --app-text: #030712;
 }
 
 html.dark {
   --title: #EEF3FF;
-  --title-alt: #FAA80F;
-  --title-secondary: #6EE7B7;
-  --title-secondary-alt: #FAA80F;
-  --title-tertiary: #FFFFFF;
-  --title-tertiary-alt: #FFFFFF;
+  --title-alt: #F5EFD9;
+  --title-secondary: #FAA80F;
+  --title-secondary-alt: #00C8E8;
+  --title-tertiary: #6EE7B7;
+  --title-tertiary-alt: #6EE7B7;
   --highlight: #00C8E8;
+  --highlight-alt: #FAA80F;
   --paragraph: #97ABC4;
   --paragraph-alt: #D2D8EF;
-  --paragraph-inverted: #444653;
-
   --app-background: #040c16;
   --app-background-alt: #061d3d;
-  --app-text: #FFFFFF;
   color-scheme: dark;
 }
 
 html,
 body {
-  @apply bg-app-background text-app-text;
+  @apply bg-app-background;
 }
