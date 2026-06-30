@@ -20,8 +20,8 @@
   --color-paragraph: var(--paragraph);
   --color-paragraph-alt: var(--paragraph-alt);
   --color-paragraph-inverted: var(--paragraph-inverted);
-  --color-app-background: var(--app-background);
-  --color-app-background-alt: var(--app-background-alt);
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
 }
 
 :root,
@@ -36,8 +36,8 @@ html.light {
   --highlight-alt: #4DD0FF;
   --paragraph: #444653;
   --paragraph-alt: #D2D8EF;
-  --app-background: #FFFFFF;
-  --app-background-alt: #344CB7;
+  --background: #FFFFFF;
+  --background-alt: #344CB7;
 }
 
 html.dark {
@@ -51,12 +51,12 @@ html.dark {
   --highlight-alt: #FAA80F;
   --paragraph: #97ABC4;
   --paragraph-alt: #D2D8EF;
-  --app-background: #040c16;
-  --app-background-alt: #061d3d;
+  --background: #040c16;
+  --background-alt: #061d3d;
   color-scheme: dark;
 }
 
 html,
 body {
-  @apply bg-app-background;
+  @apply bg-background;
 }
