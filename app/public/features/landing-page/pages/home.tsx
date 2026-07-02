@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { i18nContext } from "~/core/i18n-context";
-import { themeContext } from "~/core/theme-context";
+import { i18nContext } from "~/core/contexts/i18n-context";
+import { themeContext } from "~/core/contexts/theme-context";
 import NavBar from "~/shared/components/atoms/nav-bar";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <button onClick={() => setTheme((currentTheme) => currentTheme === "dark" ? "light" : "dark")}>
-        {translation("theme.toggle")}
+        {translation("landing.navBar.theme.toggle")}
       </button>
       <NavBar />
     </div>

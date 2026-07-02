@@ -8,8 +8,8 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import { I18nProvider } from "./core/i18n-context";
-import { ThemeProvider } from "./core/theme-context";
+import { I18nProvider } from "./core/contexts/i18n-context";
+import { ThemeProvider } from "./core/contexts/theme-context";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [

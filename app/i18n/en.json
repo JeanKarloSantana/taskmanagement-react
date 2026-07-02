@@ -1,8 +1,12 @@
 {
-  "nav.home": "Home",
-  "nav.pricing": "Pricing",
-  "nav.about": "About",
-  "nav.login": "Log in",
-  "nav.signup": "Sign Up",
-  "theme.toggle": "Toggle theme"
+  "landing": {
+    "navBar": {
+      "navHome": "Home",
+      "navPricing": "Pricing",
+      "navAbout": "About",
+      "navLogin": "Log in",
+      "navSignup": "Sign Up",
+      "theme.toggle":"Toggle theme"
+    }
+  }
 }

@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import logoDark from "~/assets/icons/brand-dark.png";
 import logoLight from "~/assets/icons/brand-light.png";
-import { i18nContext } from "~/core/i18n-context";
-import { themeContext } from "~/core/theme-context";
+import { i18nContext } from "~/core/contexts/i18n-context";
+import { themeContext } from "~/core/contexts/theme-context";
 
 export default function NavBar() {
   const { theme } = useContext(themeContext);
-  const { t } = useContext(i18nContext);
+  const { translation } = useContext(i18nContext);
   const logo = theme === "light" ? logoLight : logoDark;
 
   return (
@@ -18,15 +18,15 @@ export default function NavBar() {
         </div>
 
         <div className="flex items-center gap-10 text-sm font-medium">
-          <a className="hover:text-highlight-alt" href="/">{t("nav.home")}</a>
-          <a className="hover:text-highlight-alt" href="/pricing">{t("nav.pricing")}</a>
-          <a className="hover:text-highlight-alt" href="/about">{t("nav.about")}</a>
+          <a className="hover:text-highlight-alt" href="/">{translation("landing.navBar.navHome")}</a>
+          <a className="hover:text-highlight-alt" href="/pricing">{translation("landing.navBar.navPricing")}</a>
+          <a className="hover:text-highlight-alt" href="/about">{translation("landing.navBar.navAbout")}</a>
         </div>
 
         <div className="flex items-center gap-5 text-sm font-medium">
-          <a className="hover:text-highlight-alt" href="/login">{t("nav.login")}</a>
+          <a className="hover:text-highlight-alt" href="/login">{translation("landing.navBar.navLogin")}</a>
           <a className="rounded-md bg-title-alt px-4 py-2 text-background-alt hover:bg-highlight-alt" href="/signup">
-            {t("nav.signup")}
+            {translation("landing.navBar.navSignup")}
           </a>
         </div>
       </nav>
