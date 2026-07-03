@@ -15,14 +15,16 @@ export default function Home() {
       </button>
       <NavBar />
       <div className="flex w-full flex-row justify-center">
-        <div className="flex w-full max-w-400 flex-row justify-between">
-          <div>
-            <h1>Productivity at the speed of thought.</h1>
-            <h2>
+        <div className="flex w-full max-w-400 flex-row items-center gap-50">
+          <div className="flex-1 text-center">
+            <h1 className="text-title text-[40px]">Productivity at the speed of thought.</h1>
+            <h2 className="text-title-secondary text-[20px]">
               Spica organizes your energy, not just your tasks. High-performance workspace for modern creators.
             </h2>
           </div>
-          <img className="w-150" src={taskHeroBrand} alt="Spica task management dashboard preview" />
+          <div className="flex-1">
+            <img className="w-full" src={taskHeroBrand} alt="Spica task management dashboard preview" />
+          </div>
         </div>
       </div>
     </div>
