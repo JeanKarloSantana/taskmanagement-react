@@ -22,6 +22,9 @@
   --color-paragraph-inverted: var(--paragraph-inverted);
   --color-background: var(--background);
   --color-background-alt: var(--background-alt);
+  --color-button: var(--button);
+  --color-button-alt: var(--button-alt);
+  --color-button-text: var(--button-text);
 }
 
 :root,
@@ -38,6 +41,9 @@ html.light {
   --paragraph-alt: #D2D8EF;
   --background: #FFFFFF;
   --background-alt: #344CB7;
+  --button: #344CB7;
+  --button-text: #EEF3FF;
+  --button-alt: #F26F14;
 }
 
 html.dark {
@@ -53,6 +59,8 @@ html.dark {
   --paragraph-alt: #D2D8EF;
   --background: #040c16;
   --background-alt: #061d3d;
+  --button: #061d3d;
+  --button-alt: #031b27;
   color-scheme: dark;
 }
 
