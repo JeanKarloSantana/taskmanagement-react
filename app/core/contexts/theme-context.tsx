@@ -16,12 +16,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.classList.remove("light", "dark");
-    document.documentElement.classList.add(theme);     
+    document.documentElement.classList.add(theme);
   }, [theme]);
 
-  return (
-    <themeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </themeContext.Provider>
-  );
+  return <themeContext.Provider value={{ theme, setTheme }}>{children}</themeContext.Provider>;
 }

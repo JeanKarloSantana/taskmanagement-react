@@ -18,14 +18,25 @@ export default function NavBar() {
         </div>
 
         <div className="flex items-center gap-10 text-sm font-medium">
-          <a className="hover:text-highlight-alt" href="/">{translation("landing.navBar.navHome")}</a>
-          <a className="hover:text-highlight-alt" href="/pricing">{translation("landing.navBar.navPricing")}</a>
-          <a className="hover:text-highlight-alt" href="/about">{translation("landing.navBar.navAbout")}</a>
+          <a className="hover:text-highlight-alt" href="/">
+            {translation("landing.navBar.navHome")}
+          </a>
+          <a className="hover:text-highlight-alt" href="/pricing">
+            {translation("landing.navBar.navPricing")}
+          </a>
+          <a className="hover:text-highlight-alt" href="/about">
+            {translation("landing.navBar.navAbout")}
+          </a>
         </div>
 
         <div className="flex items-center gap-5 text-sm font-medium">
-          <a className="hover:text-highlight-alt" href="/login">{translation("landing.navBar.navLogin")}</a>
-          <a className="rounded-md bg-title-alt px-4 py-2 text-background-alt hover:bg-highlight-alt" href="/signup">
+          <a className="hover:text-highlight-alt" href="/login">
+            {translation("landing.navBar.navLogin")}
+          </a>
+          <a
+            className="rounded-md bg-title-alt px-4 py-2 text-background-alt hover:bg-highlight-alt"
+            href="/signup"
+          >
             {translation("landing.navBar.navSignup")}
           </a>
         </div>
