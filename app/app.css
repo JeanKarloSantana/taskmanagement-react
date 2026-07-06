@@ -1,8 +1,57 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Sora";
+  src: url("~/assets/fonts/Sora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("~/assets/fonts/Sora-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("~/assets/fonts/Sora-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("~/assets/fonts/Tajawal-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("~/assets/fonts/Tajawal-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("~/assets/fonts/Tajawal-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Sora", "Tajawal", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /*
@@ -29,34 +78,34 @@
 
 :root,
 html.light {
-  --title: #344CB7;
-  --title-alt: #EEF3FF;
-  --title-secondary: #F26F14;
-  --title-secondary-alt: #F26F14;
+  --title: #344cb7;
+  --title-alt: #eef3ff;
+  --title-secondary: #f26f14;
+  --title-secondary-alt: #f26f14;
   --title-tertiary: #030712;
   --title-tertiary-alt: #030712;
   --highlight: #16329f;
-  --highlight-alt: #4DD0FF;
+  --highlight-alt: #4dd0ff;
   --paragraph: #444653;
-  --paragraph-alt: #D2D8EF;
-  --background: #FFFFFF;
-  --background-alt: #344CB7;
-  --button: #344CB7;
-  --button-text: #EEF3FF;
-  --button-alt: #F26F14;
+  --paragraph-alt: #d2d8ef;
+  --background: #ffffff;
+  --background-alt: #344cb7;
+  --button: #344cb7;
+  --button-text: #eef3ff;
+  --button-alt: #f26f14;
 }
 
 html.dark {
-  --title: #EEF3FF;
-  --title-alt: #F5EFD9;
-  --title-secondary: #FAA80F;
-  --title-secondary-alt: #00C8E8;
-  --title-tertiary: #6EE7B7;
-  --title-tertiary-alt: #6EE7B7;
-  --highlight: #00C8E8;
-  --highlight-alt: #FAA80F;
-  --paragraph: #97ABC4;
-  --paragraph-alt: #D2D8EF;
+  --title: #eef3ff;
+  --title-alt: #f5efd9;
+  --title-secondary: #faa80f;
+  --title-secondary-alt: #00c8e8;
+  --title-tertiary: #6ee7b7;
+  --title-tertiary-alt: #6ee7b7;
+  --highlight: #00c8e8;
+  --highlight-alt: #faa80f;
+  --paragraph: #97abc4;
+  --paragraph-alt: #d2d8ef;
   --background: #040c16;
   --background-alt: #061d3d;
   --button: #061d3d;
@@ -66,5 +115,5 @@ html.dark {
 
 html,
 body {
-  @apply bg-background;
+  @apply bg-background font-sans;
 }
