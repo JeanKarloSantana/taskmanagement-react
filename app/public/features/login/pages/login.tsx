@@ -1,15 +1,38 @@
+import { useForm, type SubmitHandler } from "react-hook-form";
+import Input from "~/shared/components/atoms/input";
+import Label from "~/shared/components/atoms/label";
 import NavBar from "~/shared/components/atoms/nav-bar";
 
+type Inputs = {
+  email: string;
+  password: string;
+};
+
 export default function Login() {
+  const { register, handleSubmit } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
   return (
     <div>
       <NavBar />
       <div className="border border-solid rounded-md w-full max-w-385 mx-auto mt-10 flex flex-row">
-        <div className="bg-background-alt w-200 h-50">
-          <h1 className="text-[30px] pl-20 pt-20">Master your<br></br>daily rhythm.</h1>
+        <div className="bg-background-alt w-200 h-120">
+          <h1 className="text-title-alt font-bold text-[50px] pl-20 pt-20 mr-8 m-0 leading-none">Master your</h1>
+          <h1 className="text-title-secondary-alt font-bold text-[50px] pl-20 mr-8 m-0 leading-none">daily rhythm.</h1>
+          <p className="text-paragraph-alt text-[20px] pl-20 pt-20 mr-8">Turn scattered tasks into a clear plan, so you always know what needs your attention next.</p>
         </div>
-        <div className="w-full h-14">
-          <h1>test 2</h1>
+        <div className="w-full border border-solid flex justify-center">
+          <div className="w-full max-w-200 pt-18">
+            <h1 className="text-title font-bold text-[50px]">Welcome to Spica</h1>
+            <p className="text-paragraph text-[20px]">Enter your access credentials</p>
+            <form className="pt-10" onSubmit={handleSubmit(onSubmit)}>
+              <Label text="EMAIL ADDRESS" />
+              <Input className="mb-8" placeholder="email" {...register("email")} />
+              <Label text="PASSWORD" />
+              <Input placeholder="password" {...register("password")} />
+              <input type="submit" />
+            </form>
+          </div>
         </div>
       </div>
     </div>
