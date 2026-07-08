@@ -1,7 +1,9 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
 import Input from "~/shared/components/atoms/input";
+import InputError from "~/shared/components/atoms/input-error";
 import Label from "~/shared/components/atoms/label";
 import NavBar from "~/shared/components/atoms/nav-bar";
+import { emailValidation, passwordValidation } from "~/shared/validations/auth-validations";
 
 type Inputs = {
   email: string;
@@ -9,7 +11,7 @@ type Inputs = {
 };
 
 export default function Login() {
-  const { register, handleSubmit } = useForm<Inputs>();
+  const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
@@ -27,9 +29,11 @@ export default function Login() {
             <p className="text-paragraph text-[20px]">Enter your access credentials</p>
             <form className="pt-10" onSubmit={handleSubmit(onSubmit)}>
               <Label text="EMAIL ADDRESS" />
-              <Input className="mb-8" placeholder="email" {...register("email")} />
+              <Input placeholder="email" hasError={Boolean(errors.email)} {...register("email", emailValidation)} />
+              {errors.email && (<InputError error={errors.email.message} />)}
               <Label text="PASSWORD" />
-              <Input placeholder="password" {...register("password")} />
+              <Input placeholder="password" hasError={Boolean(errors.password)} {...register("password", passwordValidation)} />
+              {errors.password && (<InputError error={errors.password.message} />)}
               <input type="submit" />
             </form>
           </div>

@@ -27,6 +27,7 @@
   --color-button: var(--button);
   --color-button-alt: var(--button-alt);
   --color-button-text: var(--button-text);
+  --color-error: var(--error);
 }
 
 :root,
@@ -46,6 +47,7 @@ html.light {
   --button: #344cb7;
   --button-text: #eef3ff;
   --button-alt: #f26f14;
+  --error: #FF0000;
 }
 
 html.dark {
@@ -63,6 +65,7 @@ html.dark {
   --background-alt: #061d3d;
   --button: #061d3d;
   --button-alt: #031b27;
+  --error: #FF0000;
   color-scheme: dark;
 }
 
