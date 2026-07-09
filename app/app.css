@@ -24,6 +24,7 @@
   --color-paragraph-inverted: var(--paragraph-inverted);
   --color-background: var(--background);
   --color-background-alt: var(--background-alt);
+  --color-background-secondary: var(--background-secondary);
   --color-button: var(--button);
   --color-button-alt: var(--button-alt);
   --color-button-text: var(--button-text);
@@ -42,8 +43,9 @@ html.light {
   --highlight-alt: #4dd0ff;
   --paragraph: #444653;
   --paragraph-alt: #d2d8ef;
-  --background: #ffffff;
+  --background: #eef3ff;
   --background-alt: #344cb7;
+  --background-secondary: #eef3ff;
   --button: #344cb7;
   --button-text: #eef3ff;
   --button-alt: #f26f14;
@@ -55,7 +57,7 @@ html.dark {
   --title-alt: #f5efd9;
   --title-secondary: #faa80f;
   --title-secondary-alt: #00c8e8;
-  --title-tertiary: #6ee7b7;
+  --title-tertiary: #eef3ff;
   --title-tertiary-alt: #6ee7b7;
   --highlight: #00c8e8;
   --highlight-alt: #faa80f;

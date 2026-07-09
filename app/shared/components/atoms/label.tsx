@@ -3,5 +3,5 @@ type LabelProps = {
 }
 
 export default function Label({ text }: LabelProps) {
-    return <label className="block text-sm text-title mb-2">{text}</label>;
+    return <label className="block text-sm text-title-tertiary mb-2">{text}</label>;
 }
