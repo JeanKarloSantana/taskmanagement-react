@@ -15,15 +15,16 @@ description: 'Prompt and workflow for generating conventional commit messages us
 
 1. Run `git status` to review changed files.
 2. Run `git diff` or `git diff --cached` to inspect changes.
-3. Stage your changes with `git add <file>`.
-4. Construct your commit message using the following XML structure.
-5. After generating your commit message, Copilot will automatically run the following command in your integrated terminal (no confirmation needed):
+3. Group changes by cohesive purpose. Changes that belong to the same feature may share a commit; changes for unrelated features or concerns must be split into separate commits.
+4. For each group, stage only its files or hunks with `git add <file>` or `git add -p`.
+5. Construct a commit message for the staged group using the following XML structure.
+6. After generating the commit message, Copilot will automatically run the following command in your integrated terminal (no confirmation needed):
 
 ```bash
 git commit -m "type(scope): description"
 ```
 
-6. Just execute this prompt and Copilot will handle the commit for you in the terminal.
+7. Repeat the staging and commit steps for every remaining group.
 
 ### Commit Message Structure
 
