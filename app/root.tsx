@@ -5,9 +5,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { getAccessToken } from "./core/auth/session.server";
+import { AuthSessionProvider } from "./core/contexts/auth-session-context";
 import { I18nProvider } from "./core/contexts/i18n-context";
 import { ThemeProvider } from "./core/contexts/theme-context";
 import "./app.css";
@@ -24,6 +27,12 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
+
+export async function loader({ request }: Route.LoaderArgs) {
+  return {
+    isAuthenticated: Boolean(await getAccessToken(request)),
+  };
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -44,10 +53,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const { isAuthenticated } = useLoaderData<typeof loader>();
+
   return (
     <I18nProvider>
       <ThemeProvider>
-        <Outlet />
+        <AuthSessionProvider isAuthenticated={isAuthenticated}>
+          <Outlet />
+        </AuthSessionProvider>
       </ThemeProvider>
     </I18nProvider>
   );

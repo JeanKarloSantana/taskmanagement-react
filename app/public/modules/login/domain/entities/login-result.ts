@@ -1,3 +1,3 @@
 export class LoginResult {
-  constructor(public readonly payload: Record<string, unknown>) {}
+  constructor(public readonly accessToken: string) {}
 }

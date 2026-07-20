@@ -1,12 +1,15 @@
 import { useContext } from "react";
+import { Form } from "react-router";
 import logoDark from "~/assets/icons/brand-dark.png";
 import logoLight from "~/assets/icons/brand-light.png";
+import { useAuthSession } from "~/core/contexts/auth-session-context";
 import { i18nContext } from "~/core/contexts/i18n-context";
 import { themeContext } from "~/core/contexts/theme-context";
 
 export default function NavBar() {
   const { theme } = useContext(themeContext);
   const { translation } = useContext(i18nContext);
+  const { isAuthenticated } = useAuthSession();
   const logo = theme === "light" ? logoLight : logoDark;
 
   return (
@@ -30,15 +33,25 @@ export default function NavBar() {
         </div>
 
         <div className="flex items-center gap-5 text-sm font-medium">
-          <a className="hover:text-highlight-alt" href="/login">
-            {translation("landing.navBar.navLogin")}
-          </a>
-          <a
-            className="rounded-md bg-title-alt px-4 py-2 text-background-alt hover:bg-highlight-alt"
-            href="/signup"
-          >
-            {translation("landing.navBar.navSignup")}
-          </a>
+          {isAuthenticated ? (
+            <Form method="post" action="/logout">
+              <button className="hover:text-highlight-alt cursor-pointer" type="submit">
+                {translation("landing.navBar.navLogout")}
+              </button>
+            </Form>
+          ) : (
+            <>
+              <a className="hover:text-highlight-alt" href="/login">
+                {translation("landing.navBar.navLogin")}
+              </a>
+              <a
+                className="rounded-md bg-title-alt px-4 py-2 text-background-alt hover:bg-highlight-alt"
+                href="/signup"
+              >
+                {translation("landing.navBar.navSignup")}
+              </a>
+            </>
+          )}
         </div>
       </nav>
     </section>

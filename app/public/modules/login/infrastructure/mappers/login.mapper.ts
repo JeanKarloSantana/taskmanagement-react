@@ -12,6 +12,6 @@ export class LoginMapper {
   }
 
   public static toDomain(response: LoginResponse): LoginResult {
-    return new LoginResult(response);
+    return new LoginResult(response.accessToken);
   }
 }

@@ -9,6 +9,7 @@ type TranslationKey =
   | "landing.navBar.navPricing"
   | "landing.navBar.navAbout"
   | "landing.navBar.navLogin"
+  | "landing.navBar.navLogout"
   | "landing.navBar.navSignup"
   | "landing.navBar.theme.toggle";
 
